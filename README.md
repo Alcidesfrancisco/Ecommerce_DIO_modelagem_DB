@@ -8,7 +8,7 @@ Se Refere a versão implementada por mim acompanhando a a professora [Juliana Ma
 Essa Versão é tem melhorias indicadas pela professoa e algumas alterações que achei relevante
 
 # Criação do Banco de dados (Refinado)
-'''sql
+```sql
 Create database  if not exists Ecommerce;
 use Ecommerce;
 -- drop database Ecommerce;
@@ -147,10 +147,10 @@ create table delivery(
     constraint fk_delivery_request foreign key(idRequest) references request(idRequest)
 );
 
-'''
+```
 
-# Pupular Banco de Dados (Refinado)
-'''sql
+# Popular Banco de Dados (Refinado)
+```sql
 
 use ecommerce;
 -- Populando tabela clients
@@ -378,9 +378,9 @@ INSERT INTO delivery (idDelivery, trackingCode, idRequest, status) VALUES
     (14, 'KLM012', 15, 'Em trânsito');
 
 
-'''
+```
 # Querys e consultas SQL
-'''sql
+```sql
 use ecommerce;
 SELECT count(*) FROM clients;
 select distinct concat(Fnome,' ',Minit,' ',LName) as Client from clients;
@@ -442,4 +442,4 @@ FROM productSupplier
 INNER JOIN product ON productSupplier.idProduct = product.idProduct
 GROUP BY category;
 
-'''
+```
